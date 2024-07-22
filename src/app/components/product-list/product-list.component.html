@@ -1,0 +1,85 @@
+<div class="row">
+  <div class="sidebar">
+    <h3 class="text-center"><span class="text-white">RABBIT</span><span>SHOP</span></h3>
+    <hr>
+    <p><i class="bi bi-pie-chart-fill me-2"></i><a class="text-decoration-none text-white" href="/statistic">Quản lý
+        thống kê</a></p>
+    <p><i class="bi bi-tag-fill me-2"></i><a [routerLink]="['/category-list']" routerLinkActive="router-link-active"
+        class="text-white" href="/categories"> Quản lý danh mục</a></p>
+    <p><i class="bi bi-box-seam me-2"></i><a class="text-decoration-none text-white" href="/products">Quản lý sản
+        phẩm</a></p>
+    <p><i class="bi bi-people-fill me-2"></i><a class="text-decoration-none text-white" href="/users">Quản lý người
+        dùng</a></p>
+    <p><i class="bi bi-cart-fill me-2"></i><a class="text-decoration-none text-white" href="/order">Quản lý đơn hàng</a>
+    </p>
+    <p><i class="bi bi-chat-left-text-fill me-2"></i><a class="text-decoration-none text-white" href="/feedback">Quản lý
+        bình luận</a></p>
+    <hr>
+    <div class="text-center">
+      <a href="" class="btn btn-danger">Đăng xuất</a>
+    </div>
+  </div>
+
+
+  <div class="main-content">
+    <div class="content-header">
+      <p>TRANG QUẢN TRỊ WEBSITE RABBITSHOP</p>
+      <div>
+        <span>Admin</span>
+        <img class="rounded m-1 border border-1 border-white" width="30px" height="30px"
+          src="https://vnn-imgs-f.vgcloud.vn/2022/01/05/09/len-do-ngot-ngao-ma-ca-tinh-voi-thoi-trang-tho-bad-rabbit.jpg"
+          alt="">
+      </div>
+    </div>
+    <div class="content-section">
+      <div class="title-and-button">
+        <div class="col-md-6">
+          <h4>Quản lý sản phẩm</h4>
+        </div>
+        <div class="col-md-6 text-right">
+          <a [routerLink]="['/product-add']" routerLinkActive="router-link-active" class="btn btn-primary">Thêm sản
+            phẩm</a>
+        </div>
+      </div>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Tên sản phẩm</th>
+            <th>Hình ảnh</th>
+            <!-- <th>Danh mục</th> -->
+            <th>Giá</th>
+            <th>Mô tả</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products">
+            <td>
+              <p>{{product.name}}</p>
+            </td>
+            <td>
+              <p><img width="100px" src="{{product.image}}"></p>
+            </td>
+            <!-- <td>
+              <p>{{product.category}}</p>
+            </td> -->
+            <td>
+              <p>{{product.price}}</p>
+            </td>
+            <td>
+              <p>{{product.desc}}</p>
+            </td>
+            <td>
+              <a class="text-danger" [routerLink]="['/product-edit', product._id]">
+                <i class="fs-4 bi bi-pencil-square" style="color: palevioletred;"></i>
+              </a>
+              <a class="text-danger" href="javascript:void(0)" (click)='deleteProduct(product._id)'>
+                <i class="fs-4 bi bi-trash3"></i>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

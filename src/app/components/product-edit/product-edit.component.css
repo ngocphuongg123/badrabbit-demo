@@ -1,0 +1,94 @@
+/* Định kiểu cho sidebar */
+.sidebar {
+  width: 15%; /* Chiều rộng */
+  background-color: rgb(255, 206, 222); /* Màu nền */
+  color: palevioletred; /* Màu chữ */
+  padding: 1.5rem; /* Khoảng cách trong */
+  padding-top: 60px; /* Tránh bị che bởi header */
+  position: fixed; /* Cố định vị trí */
+  height: 100%;
+  overflow-y: auto; /* Thanh cuộn dọc */
+  left: 0;
+}
+
+.sidebar h3 {
+  text-align: center; /* Canh giữa */
+}
+
+.sidebar hr {
+  border-top: 1px solid palevioletred; /* Màu đường gạch ngang */
+}
+
+.sidebar .text-white {
+  color: palevioletred;
+}
+.sidebar .menu-item {
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.sidebar .menu-item a {
+  color: #fff; /* Màu chữ */
+  text-decoration: none; /* Bỏ gạch chân */
+}
+
+.sidebar .menu-item a:hover {
+  text-decoration: underline; /* Hiệu ứng khi di chuột */
+}
+
+.sidebar .btn-danger {
+  background-color: palevioletred; /* Màu nền */
+  border-color: palevioletred; /* Màu viền */
+  color: #fff; /* Màu chữ */
+}
+
+.sidebar .btn-danger:hover {
+  background-color: gray; /* Màu nền khi di chuột qua */
+}
+
+/* Định kiểu cho nội dung chính */
+.main-content {
+  width: 83.33333%; /* Chiều rộng */
+  padding-top: 60px; /* Tránh bị che bởi header */
+  margin-left: 20%; /* Căn lề trái */
+}
+
+/* Định dạng cho form-group */
+.form-group {
+  margin-bottom: 15px; /* Giảm khoảng cách dưới */
+  display: flex; /* Sử dụng flexbox để căn chỉnh */
+  align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+}
+
+.form-group label {
+  flex: 1; /* Phần tử label chiếm toàn bộ không gian còn lại */
+  font-size: 14px; /* Kích thước chữ nhỏ */
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  flex: 3; /* Phần tử input/textarea/select chiếm 3/4 tổng không gian */
+  font-size: 14px; /* Kích thước chữ nhỏ */
+  padding: 5px; /* Kích thước padding */
+}
+
+.form-group small {
+  font-size: 12px; /* Kích thước chữ nhỏ */
+}
+
+/* Tùy chỉnh nút "Cập nhật" */
+/* Tùy chỉnh nút "Cập nhật" */
+.btn-primary {
+  width: 20%; /* Chiếm toàn bộ chiều ngang */
+  margin-left: auto; /* Đẩy nút về phía phải */
+  background-color: rgb(244, 162, 189); /* Màu nền */
+  border-color: rgb(244, 162, 189); /* Màu viền */
+  padding: 8 10; /* Kích thước nút */
+  font-size: 0.875rem; /* Kích thước chữ */
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: palevioletred; /* Màu nền khi di chuột qua */
+  border-color: palevioletred; /* Màu viền khi di chuột qua */
+}

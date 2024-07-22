@@ -1,0 +1,115 @@
+/* Định kiểu cho sidebar */
+.sidebar {
+  width: 15%; /* col-md-2 */
+  background-color: rgb(255, 206, 222);; /* bg-dark */
+  color: palevioletred;
+  padding: 1.5rem; /* p-4 */
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  position: fixed; /* Cố định vị trí sidebar */
+  margin-left: 0%; /* Bằng với chiều rộng của col-md-2 */
+  height: 100%;
+  overflow-y: auto; /* Đảm bảo có thanh cuộn khi nội dung quá dài */
+  left: 0;
+  text-transform: uppercase; /* Chuyển đổi thành chữ in hoa */
+}
+
+/* Định kiểu cho sidebar */
+.sidebar .menu-item {
+  text-align: center; /* Canh giữa nội dung */
+}
+
+.sidebar hr {
+  border-top: 1px solid palevioletred; /* Màu sắc của hr */
+}
+
+.sidebar .menu-item {
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.sidebar .menu-item a {
+  color: palevioletred;
+  text-decoration: none; /* Bỏ gạch chân của liên kết */
+}
+
+.sidebar .menu-item a:hover {
+  text-decoration: underline; /* Hiệu ứng gạch chân khi di chuột qua */
+}
+
+.sidebar .text-center {
+  text-align: center;
+}
+
+.sidebar .btn-danger {
+  background-color: palevioletred; /* Màu nền đỏ */
+  border-color: palevioletred; /* Màu viền đỏ */
+  color: #fff; /* Màu chữ trắng */
+}
+
+.sidebar .btn-danger:hover {
+  background-color: gray; /* Màu nền khi di chuột qua */
+}
+
+/* Định kiểu cho content */
+.content {
+  width: 83.33333%; /* Chiều rộng */
+  padding: 0;
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  margin-left: 20%; /* Canh trái */
+}
+
+.content-header {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Hiệu ứng đổ bóng */
+  background-color: palevioletred; /* Màu nền */
+  color: white; /* Màu chữ */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Định kiểu cho form */
+.form-wrapper {
+  padding: 20px; /* Khoảng cách nội dung từ viền */
+  border: 1px solid #ccc; /* Đường viền */
+  border-radius: 5px; /* Bo góc */
+}
+
+/* row category-header */
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.category-header h4 {
+  margin-bottom: 0; /* Loại bỏ khoảng cách dưới của tiêu đề */
+}
+
+.category-header button {
+  margin-left: auto; /* Đẩy nút sang bên phải */
+  width: 150px;
+}
+
+/* row category-form */
+.category-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-form .form-group {
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+.category-form .form-group label {
+  font-weight: bold; /* Chữ in đậm cho nhãn */
+  text-align: left; /* Căn lề trái cho nhãn */
+}
+
+.category-form .form-control {
+  width: 100%; /* Chiều rộng 100% */
+  padding: 10px; /* Khoảng cách nội dung từ viền */
+  border: 1px solid #ccc; /* Đường viền cho input */
+  border-radius: 5px; /* Bo góc */
+}

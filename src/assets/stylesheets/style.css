@@ -1,0 +1,133 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* .container{
+  padding: 20px 50px;
+} */
+
+/* ------------------------------------------------------------- */
+
+/* Banner */
+.banner {
+  margin-top: 90px; /* Khoảng cách từ header xuống banner */
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* Chia grid thành 2 cột với chiều rộng tự động */
+  grid-column-gap: 10px; /* Khoảng cách giữa các cột */
+  place-items: center; /* Căn giữa các hình trong banner */
+}
+
+.banner img {
+  width: 400px; /* Đặt độ rộng mong muốn cho hình ảnh */
+  height: auto; /* Đảm bảo tỷ lệ khung hình bảo toàn */
+}
+
+.sanpham {
+  margin-top: 100px;
+}
+
+
+/* Grid */
+/* Lưới hiển thị sản phẩm */
+.row {
+  display: grid; /* Hiển thị sản phẩm dưới dạng lưới */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Chia cột tự động */
+  gap: 20px; /* Khoảng cách giữa các sản phẩm */
+  text-align: center; /* Căn giữa nội dung văn bản */
+  text-transform: uppercase; /* Chuyển đổi chữ thành in hoa */
+  color: palevioletred; /* Màu chữ */
+}
+.row {
+  display: flex;
+}
+.col {
+  margin: 20px;
+}
+/* Heading 2 */
+/* Tiêu đề h2 */
+h2 {
+  font-size: 24px; /* Kích thước font */
+  font-weight: bold; /* Chữ đậm */
+  color: palevioletred; /* Màu chữ */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+  text-transform: uppercase; /* Chuyển đổi chữ thành in hoa */
+  border-bottom: 2px solid rgb(244, 162, 189); /* Đường gạch dưới */
+  padding-bottom: 5px; /* Khoảng cách dưới của đường gạch */
+}
+
+/* Action Buttons */
+/* Các nút hành động */
+.action-buttons {
+  display: flex; /* Hiển thị các nút theo chiều ngang */
+  justify-content: center; /* Căn chỉnh các nút theo giữa */
+  margin-top: 5px; /* Khoảng cách từ trên xuống */
+}
+
+/* Add to Cart Button */
+/* Nút "Thêm vào giỏ hàng" */
+.add-to-cart {
+  background-color: #333; /* Màu nền của nút */
+  color: #fff; /* Màu chữ của nút */
+  border: none; /* Xóa viền của nút */
+  padding: 8px 16px; /* Kích thước padding của nút */
+  font-size: 14px; /* Kích thước font chữ */
+  cursor: pointer; /* Biểu tượng chuột là bàn tay khi di chuột qua */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+  border-radius: 5px; /* Bo góc */
+}
+
+.add-to-cart:hover {
+  background-color: palevioletred; /* Màu nền của nút khi di chuột qua */
+}
+
+/* CSS cho nút "Xem chi tiết" */
+.detail-button {
+  background-color: palevioletred; /* Màu nền */
+  border: none;
+  color: white; /* Màu chữ */
+  padding: 8px 16px; /* Kích thước nút */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin-top: 5px; /* Khoảng cách với các phần tử khác */
+  cursor: pointer;
+  border-radius: 5px; /* Bo góc */
+  transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+}
+
+.detail-button:hover {
+  background-color: #333; /* Màu nền khi di chuột qua */
+}
+
+/* Footer */
+/* Chân trang */
+.footer {
+  margin: 0 auto;
+  width: 100%; /* Chiều rộng của footer */
+  background-color: #333; /* Màu nền của footer */
+  color: #fff; /* Màu chữ của footer */
+  text-align: center; /* Canh giữa nội dung trong footer */
+  position: relative; /* Đặt position để có thể sử dụng z-index */
+  z-index: 10; /* Đặt giá trị cao hơn các phần tử khác */
+}
+
+
+.footer-content {
+  display: flex; /* Hiển thị nội dung chân trang theo chiều ngang */
+  justify-content: space-between; /* Căn chỉnh các phần tử theo chiều ngang */
+}
+
+.address,
+.contact-info {
+  flex: 1; /* Phần tỷ lệ của mỗi phần tử trong footer */
+}
+
+.address h3,
+.contact-info h3 {
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+}

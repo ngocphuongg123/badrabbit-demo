@@ -1,0 +1,209 @@
+/* Định kiểu cho header */
+header {
+  height: 60px; /* Đặt chiều cao cho header */
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  line-height: 60px; /* Đặt cùng chiều cao để căn giữa văn bản */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo header luôn ở trên cùng */
+}
+
+/* Định kiểu cho sidebar */
+.sidebar {
+  width: 15%; /* col-md-2 */
+  background-color: rgb(255, 206, 222);; /* bg-dark */
+  color: palevioletred;
+  padding: 1.5rem; /* p-4 */
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  position: fixed; /* Cố định vị trí sidebar */
+  margin-left: 0%; /* Bằng với chiều rộng của col-md-2 */
+  height: 100%;
+  overflow-y: auto; /* Đảm bảo có thanh cuộn khi nội dung quá dài */
+  left: 0;
+}
+
+
+.sidebar h3 {
+  text-align: center; /* Canh giữa nội dung */
+}
+
+.sidebar h3 .text-white {
+  color: palevioletred; /* Đảm bảo màu chữ của span text-white */
+}
+
+.sidebar hr {
+  border-top: 1px solid palevioletred; /* Màu sắc của hr */
+}
+
+.sidebar .menu-item {
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.sidebar .menu-item a {
+  color: #fff; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân của liên kết */
+}
+
+.sidebar .menu-item a:hover {
+  text-decoration: underline; /* Hiệu ứng gạch chân khi di chuột qua */
+}
+
+.sidebar .text-center {
+  text-align: center;
+}
+
+.sidebar .btn-danger {
+  background-color: palevioletred; /* Màu nền đỏ */
+  border-color: palevioletred; /* Màu viền đỏ */
+  color: #fff; /* Màu chữ trắng */
+}
+
+.sidebar .btn-danger:hover {
+  background-color: gray; /* Màu nền khi di chuột qua */
+}
+
+
+/* Định kiểu cho nội dung chính */
+.main-content {
+  width: 83.33333%; /* Bằng với col-md-10 */
+  padding: 0; /* padding-0 */
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  margin-left: 20%; /* Bằng với chiều rộng của sidebar */
+
+}
+.content-header {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: palevioletred;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  padding-bottom: 0.25rem;
+}
+
+/* Định kiểu cho content-section */
+.content-section {
+  padding: 2rem; /* padding-5 (5 * 0.25rem) */
+}
+
+/* Định kiểu cho title-and-button để đặt tiêu đề và nút trên cùng một hàng */
+.title-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Khoảng cách dưới cho tiêu đề và nút */
+}
+
+/* Các định dạng tùy chỉnh khác */
+.bg-dark {
+  background-color: rgb(255, 206, 222); /* Màu nền đen */
+}
+
+.text-white {
+  color: palevioletred; /* Màu chữ trắng */
+}
+
+.text-danger {
+  color: #dc3545; /* Màu chữ đỏ */
+}
+
+.text-center {
+  text-align: center; /* Canh giữa nội dung */
+}
+
+.btn-danger {
+  background-color: palevioletred; /* Màu nền đỏ */
+  border-color: palevioletred; /* Màu viền đỏ */
+}
+
+.btn-danger:hover {
+  background-color: gray; /* Màu nền đỏ khi di chuột qua */
+}
+
+.page-title {
+  font-size: 24px; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  margin-bottom: 20px; /* Khoảng cách dưới */
+}
+
+/* Tùy chỉnh nút "Thêm sản phẩm" */
+.btn-primary {
+  background-color: rgb(244, 162, 189); /* Màu nền */
+  border-color: rgb(244, 162, 189); /* Màu viền */
+  padding: 0.25rem 0.75rem; /* Giảm kích thước nút */
+  font-size: 0.875rem; /* Giảm kích thước chữ */
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: palevioletred; /* Màu nền khi di chuột qua */
+  border-color: palevioletred; /* Màu viền khi di chuột qua */
+}
+
+a {
+  color: white;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Định dạng cho bảng */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Khoảng cách từ phần trên */
+  margin-bottom: 20px; /* Khoảng cách từ phần dưới */
+}
+
+.table th,
+.table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.table th {
+  background-color: #f2f2f2;
+  white-space: nowrap; /* Ngăn ngừa việc ngắt dòng trong tiêu đề */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.table tbody tr:hover {
+  background-color: #e9e9e9;
+}
+
+/* Đặt chiều rộng tối thiểu cho các cột */
+.table th:nth-child(3),
+.table td:nth-child(3) {
+  min-width: 150px; /* Điều chỉnh giá trị này để phù hợp với nội dung của bạn */
+}
+
+/* Định dạng cho nút "Thêm sản phẩm" */
+.mt-3 {
+  margin-top: 20px !important; /* Khoảng cách từ nút đến bảng */
+}
+
+.btn-primary {
+  display: block !important; /* Chuyển thành hiển thị dạng khối */
+  width: 100% !important; /* Chiều rộng bằng 100% */
+}

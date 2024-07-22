@@ -1,0 +1,145 @@
+/* Định kiểu cho sidebar */
+.sidebar {
+  width: 15%; /* col-md-2 */
+  background-color: rgb(255, 206, 222);; /* bg-dark */
+  color: palevioletred;
+  padding: 1.5rem; /* p-4 */
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  position: fixed; /* Cố định vị trí sidebar */
+  margin-left: 0%; /* Bằng với chiều rộng của col-md-2 */
+  height: 100%;
+  overflow-y: auto; /* Đảm bảo có thanh cuộn khi nội dung quá dài */
+  left: 0;
+}
+
+.sidebar h3 {
+  text-align: center; /* Canh giữa nội dung */
+  color: palevioletred; /* Đảm bảo màu chữ của span text-white */
+
+}
+
+.sidebar .text-white {
+  color: palevioletred; /* Đảm bảo màu chữ của span text-white */
+}
+
+.sidebar hr {
+  border-top: 1px solid palevioletred; /* Màu sắc của hr */
+}
+
+.sidebar .menu-item {
+  margin-bottom: 15px; /* Khoảng cách dưới */
+}
+
+.sidebar .menu-item a {
+  color: #fff; /* Màu chữ trắng */
+  text-decoration: none; /* Bỏ gạch chân của liên kết */
+}
+
+.sidebar .menu-item a:hover {
+  text-decoration: underline; /* Hiệu ứng gạch chân khi di chuột qua */
+}
+
+.sidebar .text-center {
+  text-align: center;
+}
+
+.sidebar .btn-danger {
+  background-color: palevioletred; /* Màu nền đỏ */
+  border-color: palevioletred; /* Màu viền đỏ */
+  color: #fff; /* Màu chữ trắng */
+}
+
+.sidebar .btn-danger:hover {
+  background-color: gray; /* Màu nền khi di chuột qua */
+}
+
+/* Định kiểu cho nội dung chính */
+.main-content {
+  width: 83.33333%; /* Bằng với col-md-10 */
+  padding: 0; /* padding-0 */
+  padding-top: 60px; /* Đảm bảo nội dung không bị che bởi header */
+  margin-left: 20%; /* Bằng với chiều rộng của sidebar */
+}
+
+/* Định kiểu cho header của nội dung */
+.content-header {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  background-color: palevioletred;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+}
+
+/* Định kiểu cho form sản phẩm */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Đưa các phần tử qua bên trái */
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Định kiểu cho từng phần tử trong form */
+.product-form > .form-group {
+  margin-bottom: 20px; /* Khoảng cách giữa các phần tử */
+  width: 100%;
+  text-align: left; /* Căn lề trái cho tất cả văn bản trong form-group */
+}
+
+/* Định kiểu cho nhãn */
+.product-form label {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  display: block; /* Đảm bảo nhãn là một block để căn lề trái */
+}
+
+/* Định kiểu cho các input, select và textarea */
+.product-form input,
+.product-form select,
+.product-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.product-form textarea {
+  resize: vertical;
+}
+
+.product-form small {
+  font-size: 0.875rem;
+  color: #d9534f;
+  display: block; /* Đảm bảo small là một block để căn lề trái */
+}
+
+/* Định kiểu cho nút submit */
+.btn-submit {
+  margin-top: 20px; /* Khoảng cách giữa nút và các phần tử khác */
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: rgb(244, 162, 189); /* Màu nền rgb(244, 162, 189) */
+  border-color: rgb(244, 162, 189); /* Màu viền rgb(244, 162, 189) */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  color: #fff; /* Màu chữ trắng */
+  cursor: pointer; /* Biểu tượng con trỏ */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Hiệu ứng chuyển màu */
+}
+
+.btn-primary:hover {
+  background-color: palevioletred; /* Màu nền xanh khi di chuột qua */
+  border-color: palevioletred; /* Màu viền xanh khi di chuột qua */
+}
+

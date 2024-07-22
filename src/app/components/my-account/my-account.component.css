@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.account-container {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.profile-header {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.account-details {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.account-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.account-details p {
+  margin: 5px 0;
+}
+
+.account-actions button {
+  background-color: palevioletred;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.account-actions button:hover {
+  background-color: powderblue;
+}

@@ -1,0 +1,68 @@
+<div class="sidebar">
+  <h3 class="text-center"><span class="text-white">RABBIT</span><span>SHOP</span></h3>
+  <hr>
+  <div class="menu-item"><i class="bi bi-pie-chart-fill me-2"></i><a class="" href="/statistic">Quản lý thống kê</a>
+  </div>
+  <div class="menu-item"><i class="bi bi-tag-fill me-2"></i><a [routerLink]="['/category-list']"
+      routerLinkActive="router-link-active" class="" href="/categories">Quản lý danh
+      mục</a></div>
+  <div class="menu-item"><i class="bi bi-box-seam me-2"></i><a [routerLink]="['/product-list']"
+      routerLinkActive="router-link-active" class="" href="/products">Quản lý sản phẩm</a></div>
+  <div class="menu-item"><i class="bi bi-people-fill me-2"></i><a class="" href="/users">Quản lý người dùng</a></div>
+  <div class="menu-item"><i class="bi bi-cart-fill me-2"></i><a class="" href="/order">Quản lý đơn hàng</a></div>
+  <div class="menu-item"><i class="bi bi-chat-left-text-fill me-2"></i><a class="" href="/feedback">Quản lý bình
+      luận</a></div>
+  <hr>
+  <div class="text-center">
+    <a href="" class="btn btn-danger">Đăng xuất</a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="content-header">
+    <p>TRANG QUẢN TRỊ WEBSITE HPLSHOP</p>
+    <div>
+      <span>Admin</span>
+      <img class="rounded m-1 border border-white" width="30px" height="30px"
+        src="https://vnn-imgs-f.vgcloud.vn/2022/01/05/09/len-do-ngot-ngao-ma-ca-tinh-voi-thoi-trang-tho-bad-rabbit.jpg"
+        alt="">
+    </div>
+  </div>
+
+  <div class="content-body">
+    <div class="title-and-button">
+      <div class="col-md-6">
+        <h4>Quản lý danh mục</h4>
+      </div>
+      <div class="col-md-6 text-right">
+        <a [routerLink]="['/category-add']" routerLinkActive="router-link-active" class="btn btn-primary">Thêm sản
+          phẩm</a>
+      </div>
+    </div>
+  </div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Tên sản phẩm</th>
+        <th>Hình ảnh</th>
+        <th>Thao tác</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <td>
+          <p>{{category.name}}</p>
+        </td>
+        <td>
+          <p><img width="100px" src="{{category.image}}"></p>
+        </td>
+        <td>
+          <a class="text-primary" [routerLink]="['/category-edit/'] + category._id"><i class="fs-4 bi bi-pencil-square"
+              style="color: palevioletred;"></i></a>
+          <a class="text-danger" href="javascript:void(0)" (click)='deleteCategory(category._id)'><i
+              class="fs-4 bi bi-trash3"></i></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

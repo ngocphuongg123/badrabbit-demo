@@ -1,0 +1,102 @@
+<nav class="navbar">
+  <div class="container">
+    <button class="navbar-toggler" id="navbar-toggler">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-menu" id="navbarSupportedContent">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/logo.jpg" alt="Logo">
+      </a>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="" [routerLink]="['home']">TRANG CHỦ</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" [routerLink]="['/products']" routerLinkActive="router-link-active"  role="button" aria-expanded="false">
+            SẢN PHẨM
+          </a>
+          <ul class="dropdown-menu">
+            <li *ngFor="let category of categories" class="dropdown-item">
+              <a [routerLink]="['/products']" [queryParams]="{category: category._id}" routerLinkActive="router-link-active" >
+                {{category.name}}
+              </a>
+           </li>
+            <!-- <li><a class="dropdown-item" href="#">Cardigan</a></li>
+            <li><a class="dropdown-item" href="#">Quần</a></li>
+            <li><a class="dropdown-item" href="#">Hoodie</a></li> -->
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">GIỚI THIỆU</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link">LIÊN HỆ</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="javascript:void(0)" [routerLink]="['/products']" routerLinkActive="router-link-active" >PRODUCT</a>
+          <ul class="dropdown-menu-2">
+            <li *ngFor="let category of categories" class="dropdown-item">
+              <a [routerLink]="['/products']" [queryParams]="{category: category._id}" routerLinkActive="router-link-active" >{{category.name}}</a>
+            </li>
+          </ul>
+        </li> -->
+      </ul>
+      <!-- Thanh tìm kiếm và giỏ hàng -->
+      <div class="top-bar">
+        <div class="search-item">
+          <!-- <div class="searchitem"{{this.keyword}} ></div> -->
+          <input type="text" name="keyword" [(ngModel)]="keyword" id="searchProductHome"
+            placeholder="Tìm kiếm sản phẩm...">
+          <a href="javascript:void(0)" (click)="onSearch()">
+            <button class="search-button" type="button">
+              <i class="fas fa-search"></i>
+            </button>
+          </a>
+        </div>
+        <!-- <div class="search-item">
+          <input type="text" id="searchProductHome" placeholder="Tìm kiếm sản phẩm...">
+          <button class="search-button" type="button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div> -->
+        <div class="cart-item">
+          <!-- <a href="">Giỏ hàng</a>  -->
+          <i class="bi bi-basket2-fill"></i>
+        </div>
+        <!-- Menu tài khoản người dùng -->
+        <div class="navbar-nav ml-auto">
+          <ul class="nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                TÀI KHOẢN
+              </a>
+              <ul class="dropdown-menu-2">
+                <li *ngIf="!isLogin" class="dropdown-item">
+                  <a class="nav-link">Đăng ký</a>
+                </li>
+                <li *ngIf="isLogin" class="dropdown-item">
+                  <a class="nav-link" [routerLink]="['/my-account']" routerLinkActive="router-link-active">Tài khoản</a>
+                </li>
+                <li *ngIf="!isLogin" class="dropdown-item">
+                  <a class="nav-link" [routerLink]="['login']">Đăng nhập</a>
+                </li>
+                <li *ngIf="isADM" class="dropdown-item">
+                  <a class="nav-link" [routerLink]="['category-list']" routerLinkActive="router-link-active">Trang quản
+                    trị</a>
+                </li>
+                <li *ngIf="isLogin" class="dropdown-item">
+                  <a (click)="onLogout()">Đăng xuất</a>
+                </li>
+              </ul>
+
+            </li>
+          </ul>
+        </div>
+
+        <a *ngIf="isLogin">Xin chào {{ isLogin.user.fullname }}</a>
+
+      </div>
+
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,187 @@
+/* Thẻ chứa thanh điều hướng */
+.navbar {
+  background-color: #fbf7f0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* Chỉnh sửa logo trong thanh điều hướng */
+.navbar-brand img {
+  width: 60px;
+}
+
+/* Ẩn nút toggle menu trên các thiết bị nhỏ */
+.navbar-toggler {
+  display: none;
+}
+
+/* Chứa menu và logo trong thanh điều hướng */
+.navbar-menu {
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Chứa các liên kết trong thanh điều hướng */
+.navbar-nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-left: 0; /* Di chuyển navbar-nav sang bên trái thêm */
+}
+
+/* Thanh trên cùng chứa các mục khác */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+/* Mỗi mục trong thanh điều hướng */
+.nav-item {
+  position: relative;
+}
+
+/* Liên kết trong thanh điều hướng */
+.nav-link {
+  color: #6a6087;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: palevioletred;
+}
+
+/* Menu thả xuống cho các liên kết có dropdown */
+.dropdown-menu {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+}
+
+.dropdown-item {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+  background-color: #968fad;
+}
+
+/* Hộp tìm kiếm */
+.search-item {
+  display: flex;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 8px 30px 8px 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100px;
+}
+
+input[type="text"]:focus {
+  border-color: #6a6087;
+}
+
+.search-button {
+  background-color: palevioletred;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 5px;
+}
+
+.search-button i {
+  color: #6a6087;
+  font-size: 16px;
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 10px;
+}
+
+.nav-item a {
+  color: #6a6087;
+}
+
+.nav-item a:hover {
+  color: palevioletred;
+}
+
+.nav-item a[ngIf] {
+  font-weight: normal;
+  color: #333;
+}
+
+.nav-item a[ngIf]:hover {
+  background-color: transparent;
+}
+
+.search-item input {
+  margin-right: 5px;
+}
+
+.cart-item {
+  margin-left: 20px;
+}
+
+.dropdown-menu-2 {
+  list-style-type: none;
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 100;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  font-size: 10px;
+  width: auto;
+}
+
+.nav-item.dropdown:hover .dropdown-menu-2 {
+  display: block;
+  background-color: #968fad;
+}

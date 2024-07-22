@@ -1,0 +1,69 @@
+<div class="banner">
+  <img src="../assets/images/img1.jpg">
+  <img src="../assets/images/img2.jpg">
+  <img src="../assets/images/img3.jpg">
+  <img src="../assets/images/img4.jpg">
+</div>
+<!-- *ngFor="let product of products" -->
+<!-- <div class="sanpham">
+  <h2>BEST SELLER</h2>
+  <div id="hot" class="row"></div>
+  <h2>T-shirt</h2>
+  <div id="proCate1" class="row"></div>
+  <h2>Cardigan</h2>
+  <div id="proCate2" class="row"></div>
+  <h2>Quần</h2>
+  <div id="proCate3" class="row"></div>
+  <h2>Hoodie</h2>
+  <div id="proCate4" class="row"></div>
+</div> -->
+
+<!-- ***** Men Area Starts ***** -->
+<section class="section" id="men">
+  <div class="title-container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="section-header">
+          <h2>Latest</h2>
+          <span>Gen Z Fashion: Express Yourself, Stay Unique!</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="product-carousel">
+        <div class="product-carousel-wrapper">
+
+          <div class="product-item" *ngFor="let product of products">
+            <div class="product-thumb">
+              <div class="product-hover">
+                <ul>
+                  <!-- <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li> -->
+                  <li><a [routerLink]="['/product-detail/' + product._id]" routerLinkActive="router-link-active" ><i class="fa fa-eye"></i></a></li>
+                  <li><a><i class="fa fa-star"></i></a></li>
+                  <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                </ul>
+              </div>
+              <img [routerLink]="['/product-detail/' + product._id]" routerLinkActive="router-link-active"  [src]="product.image" alt="">
+            </div>
+            <div class="product-details">
+              <h4><a>{{ product.name }}</a></h4>
+              <span>{{ product.price | currency }}</span>
+              <ul class="product-stars">
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+                <li><i class="fa fa-star"></i></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ***** Men Area Ends ***** -->

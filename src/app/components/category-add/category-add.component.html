@@ -1,0 +1,70 @@
+<div class="sidebar">
+  <h3 class="text-center"><span class="text-white">RABBIT</span><span>SHOP</span></h3>
+  <hr>
+  <div class="menu-item"><i class="bi bi-pie-chart-fill me-2"></i><a class="" href="/statistic">Quản lý thống kê</a>
+  </div>
+  <div class="menu-item"><i class="bi bi-tag-fill me-2"></i><a [routerLink]="['/category-list']"
+      routerLinkActive="router-link-active" class="" href="/categories">Quản lý danh
+      mục</a></div>
+  <div class="menu-item"><i class="bi bi-box-seam me-2"></i><a class="" href="/products">Quản lý sản phẩm</a></div>
+  <div class="menu-item"><i class="bi bi-people-fill me-2"></i><a class="" href="/users">Quản lý người dùng</a></div>
+  <div class="menu-item"><i class="bi bi-cart-fill me-2"></i><a class="" href="/order">Quản lý đơn hàng</a></div>
+  <div class="menu-item"><i class="bi bi-chat-left-text-fill me-2"></i><a class="" href="/feedback">Quản lý bình
+      luận</a></div>
+  <hr>
+  <div class="text-center">
+    <a href="" class="btn btn-danger">Đăng xuất</a>
+  </div>
+</div>
+<!-- [FormGroup]="categoryForm" trong Angular là một cú pháp để liên kết một dối tượng FormGroup từ TypeScript
+    với một  iểu mẫu trong template HTML. [formGroup]="categoryForm" sẽ liên kết FormGroup này với biểu mẫu trong template HTML của bạn
+    Điều này giúp tự động đồng bộ hóa dữ liệu giữa biểu mẫu và đối tượng FormGroup trong TypeScript.
+    Trong trường hợp categoryForm la fmoojt đối tượng FormGroup được khai báo và khởi tạo trong TypeScript, có thể sử dụng để quản lý các trường và
+    Ex: import { FormGroup, FormBuiler, Validators } from '@angular/forms';
+  -->
+
+<div class="content">
+  <div class="content-header">
+    <p>TRANG QUẢN TRỊ WEBSITE HPLSHOP</p>
+    <div>
+      <span>Admin</span>
+      <img class="rounded m-1 border border-white" width="30px" height="30px"
+        src="https://vnn-imgs-f.vgcloud.vn/2022/01/05/09/len-do-ngot-ngao-ma-ca-tinh-voi-thoi-trang-tho-bad-rabbit.jpg"
+        alt="">
+    </div>
+  </div>
+
+  <div class="form-wrapper">
+    <form (ngSubmit)="onSubmit()" [formGroup]="categoryForm">
+      <div class="row category-header">
+        <h4>Quản lý danh mục</h4>
+        <button class="btn btn-primary">Thêm</button>
+      </div>
+      <div class="row category-form">
+        <div class="form-group">
+          <label for="name">Tên danh mục</label>
+          <input type="text" name="name" formControlName="name" [(ngModel)]="category.name" class="form-control"
+            placeholder="" aria-describedby="nameHelpId">
+
+          <small *ngIf="!categoryForm.get('name')?.valid && categoryForm.get('name')?.touched" id="nameHelpId"
+            class="text-muted">
+            Category name is requied and at least 6 charaters
+          </small>
+        </div>
+
+        <div class="form-group">
+          <label for="image">Image URL</label>
+          <input type="text" name="image" id="image" formControlName="image" [(ngModel)]="category.image"
+            class="form-control" placeholder="" aria-describedby="imageHelpId" />
+          <small *ngIf="
+                  !categoryForm.get('image')?.valid &&
+                  categoryForm.get('image')?.touched
+                  " id="imageHelpId" class="text-muted">Image URL is required</small>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+</div>

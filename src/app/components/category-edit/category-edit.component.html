@@ -1,0 +1,69 @@
+<div class="sidebar">
+  <h3 class="text-center"><span class="text-white">RABBIT</span><span>SHOP</span></h3>
+  <hr>
+  <div class="menu-item"><i class="bi bi-pie-chart-fill me-2"></i><a class=""
+      href="/statistic">Quản lý thống kê</a></div>
+  <div class="menu-item"><i class="bi bi-tag-fill me-2"></i><a [routerLink]="['/category-list']"
+      routerLinkActive="router-link-active" class="" href="/categories">Quản lý danh
+      mục</a></div>
+  <div class="menu-item"><i class="bi bi-box-seam me-2"></i><a class=""
+      href="/products">Quản lý sản phẩm</a></div>
+  <div class="menu-item"><i class="bi bi-people-fill me-2"></i><a class=""
+      href="/users">Quản lý người dùng</a></div>
+  <div class="menu-item"><i class="bi bi-cart-fill me-2"></i><a class=""
+      href="/order">Quản lý đơn hàng</a></div>
+  <div class="menu-item"><i class="bi bi-chat-left-text-fill me-2"></i><a class=""
+      href="/feedback">Quản lý bình luận</a></div>
+  <hr>
+  <div class="text-center">
+    <a href="" class="btn btn-danger">Đăng xuất</a>
+  </div>
+</div>
+
+    <!-- [FormGroup]="categoryForm" trong Angular là một cú pháp để liên kết một dối tượng FormGroup từ TypeScript
+    với một  iểu mẫu trong template HTML. [formGroup]="categoryForm" sẽ liên kết FormGroup này với biểu mẫu trong template HTML của bạn
+    Điều này giúp tự động đồng bộ hóa dữ liệu giữa biểu mẫu và đối tượng FormGroup trong TypeScript.
+    Trong trường hợp categoryForm la fmoojt đối tượng FormGroup được khai báo và khởi tạo trong TypeScript, có thể sử dụng để quản lý các trường và
+    Ex: import { FormGroup, FormBuiler, Validators } from '@angular/forms';
+  -->
+
+  <div class="content-wrapper">
+    <form (ngSubmit)="onSubmit()" [formGroup]="categoryForm">
+      <div class="card" *ngIf="category">
+        <div class="card-header">
+          Sửa danh mục
+        </div>
+        <div class="card-body">
+          <div class="form-group d-block">
+            <label for="id">Category Id</label>
+            <input readonly type="text" name="_id" id="_id"
+            formControlName="_id"
+            [(ngModel)]="category._id" class="form-control" placeholder="" aria-describedby="idhelpId">
+            <small *ngIf="!categoryForm.get('_id')?.valid && categoryForm.get('_id')?.touched" id="idhelpId" class="text-muted">Category id is required</small>
+          </div>
+          <div class="form-group d-block">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"
+            formControlName="name"
+            [(ngModel)]="category.name" class="form-control" placeholder="" aria-describedby="idhelpId">
+            <small *ngIf="!categoryForm.get('name')?.valid && categoryForm.get('name')?.touched" id="idhelpId" class="text-muted">Category name is required</small>
+          </div>
+          <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" name="image" id="image" formControlName="image" [(ngModel)]="category.image"
+              class="form-control" placeholder="" aria-describedby="imageHelpId" />
+            <small *ngIf="
+                !categoryForm.get('image')?.valid &&
+                categoryForm.get('image')?.touched
+              " id="imageHelpId" class="text-muted">Image URL is required</small>
+          </div>
+          <br>
+          <div class="form-group">
+            <button class="btn btn-primary">Update</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
